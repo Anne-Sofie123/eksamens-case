@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.aquarium {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(to bottom,
+    #b8eeff 0%,
+    #70d4f8 12%,
+    #38b8ec 30%,
+    #1a9cd4 55%,
+    #1a90c8 75%,
+    #2aa8d8 100%
+  );
+}
+
+.ray {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 55vh;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.18), transparent);
+  transform-origin: top center;
+  pointer-events: none;
+  animation: raySway 5s ease-in-out infinite alternate;
+}
+
+@keyframes raySway {
+  from { transform: rotate(-6deg) skewX(5deg);  opacity: 0.6; }
+  to   { transform: rotate(6deg)  skewX(-5deg); opacity: 1;   }
+}
+
+.sand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: linear-gradient(to bottom, #dba94a, #c48a30);
+  border-radius: 60% 60% 0 0 / 30px 30px 0 0;
+  z-index: 1;
+}
+
+.sand::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: radial-gradient(ellipse 60% 100% at 50% 100%, #dba94a, transparent);
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255, 255, 255, 0.85),
+    rgba(180, 230, 255, 0.4),
+    transparent
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  pointer-events: none;
+  animation: bubbleRise linear infinite;
+}
+
+@keyframes bubbleRise {
+  0%   { transform: translateY(0)      translateX(0);    opacity: 0.8; }
+  40%  { transform: translateY(-35vh)  translateX(8px);  opacity: 0.6; }
+  70%  { transform: translateY(-60vh)  translateX(-6px); opacity: 0.4; }
+  100% { transform: translateY(-90vh)  translateX(4px);  opacity: 0;   }
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: radial-gradient(ellipse 74% 80% at 50% 52%,
+    transparent 40%,
+    rgba(2, 30, 55, 0.14) 68%,
+    rgba(2, 30, 55, 0.38) 100%
+  );
+}
+
+.pushable {
+  transition: transform 0.5s ease-out;
+}
+
+.fish1 {
+  position: absolute;
+  max-width: 28vw;
+  transform: translate(-20vw,10vw);
+  animation: fish1 22s linear infinite;
+  z-index: 3;
+}
+
+@keyframes fish1 {
+    0%   {transform: translate(-20vw,10vw);}
+    100% {transform: translate(110vw,10vw);}
+}
+
+.fish2 {
+  position: absolute;
+  max-width: 24vw;
+  animation: fish2 20s linear infinite;
+  animation-delay: 2s;
+  z-index: 3;
+  transform: translate(110vw,32vw);
+}
+
+@keyframes fish2 {
+    0%   {transform: translate(110vw, 32vw) scaleX(-1);}
+    100% {transform: translate(-30vw, 32vw) scaleX(-1);}
+}
+
+.fish3 {
+  position: absolute;
+  max-width: 20vw;
+  transform: translate(100vw,5vw);
+  animation: fish3 13s linear infinite;
+  animation-delay: 6s;
+  z-index: 3;
+}
+
+@keyframes fish3 {
+    0%   {transform: translate(100vw,5vw) scaleX(-1);}
+    100% {transform: translate(-20vw,10vw) scaleX(-1);}
+}
+
+.fish4 {
+  position: absolute;
+  max-width: 12vw;
+  transform: translate(110vw, 22vw);
+  animation: fish4 25s linear infinite;
+  animation-delay: 6s;
+  z-index: 3;
+}
+
+@keyframes fish4 {
+    0%   {transform: translate(110vw, 22vw);}
+    100% {transform: translate(-25vw, 22vw);}
+}
+
+.fish5 {
+  position: absolute;
+  max-width: 8vw;
+  bottom: 55px;
+  animation: fish5Walk 40s linear infinite;
+  animation-delay: 1s;
+  z-index: 6;
+  transform: translateX(-12vw);
+
+  
+}
+
+@keyframes fish5Walk {
+    0%   { transform: translateX(-12vw) scaleX(1); }
+    100% { transform: translateX(112vw) scaleX(1); }
+}
+
+
+.seastar {
+  position: absolute;
+  max-width: 10vw;
+  bottom: 68px;
+  z-index: 2;
+  animation: seastarCrawl 70s linear infinite;
+}
+
+@keyframes seastarCrawl {
+  0%   { transform: translateX(-15vw); }
+  100% { transform: translateX(110vw); }
+}
+
+#faktaBoks {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  pointer-events: none;
+}
+
+.fiskeFakta {
+  background-color: rgba(144,238,144,1);
+  border-radius: 25px;
+  font-family: Fredoka;
+  padding: 20px;
+  max-width: min(90vw, 480px);
+  min-width: 200px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fiskeFakta.isVisible {
+  opacity: 1;
+}
+
+.fakta-navn {
+  font-size: 1.8vw;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.03em;
+}
+
+.fakta-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  font-size: 1.2vw;
+  margin-bottom: 12px;
+}
+
+.fakta-label {
+  font-weight: 600;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.fakta-divider {
+  display: none;
+}
+
+.fakta-fun {
+  font-size: 1.1vw;
+  font-style: italic;
+}
+
+#tilbageKnap {
+  background-color: rgba(144,238,144,1);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+
+#globusKnap {
+  background-color: rgba(144,238,144,1);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+
+#buttons {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+#pushHeader {
+    font-family: Fredoka;
+    font-size: 2rem;
+    color: white;
+    text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+    position: fixed;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    white-space: nowrap;
+}
+
