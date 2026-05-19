@@ -1,113 +1,57 @@
+html,
 body {
-  background: url(../img/background.png);
-  background-size: 1030px;
-}
-
-#vendespil {
-    display: flex;
-    justify-content: center;    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     font-family: Fredoka;
-    font-size: 4rem;
-    color: white;
-    text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
-     margin: 0;
 }
 
-.images {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  gap: 20px; /* spacing between cards */
-  max-width: 1000px;
-  margin: 0 auto; /* center grid */
+/* Kort container */
+.cards-container {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 40px;
+
+    justify-content: center;
+    align-content: center;
 }
 
+/* Kort */
 .card {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* keeps card square while scaling */
-  border-radius: 20px;
-  cursor: pointer;
-  perspective: 1000px;
-  overflow: hidden;
+    width: 180px;
+    height: 240px;
+
+    background-color: rgba(255,255,255,0.25);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(3px);
+
+    transition: 0.3s;
 }
 
-/* Front + Back */
-.card-front,
-.card-back {
-  position: absolute;       
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   
-  backface-visibility: hidden;
-  transition: transform 0.5s;
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-/* Front side */
-.card-front {
-  transform: rotateY(0deg);
+/* Tilbage knap */
+#go-back {
+    position: fixed;
+
+    top: 40px;
+    left: 20px;
+
+    width: 90px;
+    height: 90px;
+
+    z-index: 999;
 }
 
-/* Back side */
-.card-back {
-  transform: rotateY(180deg);
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Flip animation */
-.card.flipped .card-front {
-  transform: rotateY(180deg);
-}
-
-.card.flipped .card-back {
-  transform: rotateY(360deg);
-}
-
-#tilbageKnap {
-  background-color: rgba(144,238,144,1);
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-}
-
-#globusKnap {
-  background-color: rgba(144,238,144,1);
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-  opacity: 0;
-}
-
-#buttons {
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-#pushHeader {   
-    font-family: Fredoka;
-    font-size: 2rem;
-    color: white;
-    text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
+#go-back img {
+    width: 100%;
+    height: 100%;
 }
