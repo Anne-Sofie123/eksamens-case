@@ -42,7 +42,7 @@ body {
     transform-style: preserve-3d;
 }
 
-/* VEND */
+/* VEND KORT */
 .card.flipped .card-inner {
     transform: rotateY(180deg);
 }
@@ -55,16 +55,21 @@ body {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
     border-radius: 20px;
 
     backface-visibility: hidden;
 }
 
-/* BAGSIDE MED FISK */
+/* FISKEKORT */
 .card-back {
     transform: rotateY(180deg);
+}
+
+/* HOVER */
+.card:hover {
+    transform: scale(1.03);
 }
 
 /* TILBAGE KNAP */
