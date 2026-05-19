@@ -6,39 +6,68 @@ body {
     font-family: Fredoka;
 }
 
-/* Kort container */
+/* GRID */
 .cards-container {
     width: 100%;
     height: 100vh;
 
     display: grid;
     grid-template-columns: repeat(4, 180px);
+
     gap: 40px;
 
     justify-content: center;
     align-content: center;
 }
 
-/* Kort */
+/* KORT */
 .card {
     width: 180px;
     height: 240px;
 
-    background-color: rgba(255,255,255,0.25);
+    perspective: 1000px;
 
-    border-radius: 20px;
-
-    backdrop-filter: blur(3px);
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.05);
     cursor: pointer;
 }
 
-/* Tilbage knap */
+/* INDRE KORT */
+.card-inner {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    transition: transform 0.8s;
+
+    transform-style: preserve-3d;
+}
+
+/* VEND */
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* FORSIDE + BAGSIDE */
+.card-front,
+.card-back {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    backface-visibility: hidden;
+}
+
+/* BAGSIDE MED FISK */
+.card-back {
+    transform: rotateY(180deg);
+}
+
+/* TILBAGE KNAP */
 #go-back {
     position: fixed;
 

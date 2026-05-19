@@ -1,9 +1,11 @@
-"use strict";
-
 const cards = document.querySelectorAll(".card");
 
 cards.forEach(card => {
-    card.addEventListener("click", function () {
+
+    card.addEventListener("click", () => {
+
         card.classList.toggle("flipped");
+
     });
+
 });
