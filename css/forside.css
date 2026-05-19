@@ -1,57 +1,60 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
 body {
-    background-image: url(../img/forside.png);
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
+/* Overskrift */
 #welcome-header {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     font-family: Fredoka;
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
-    text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
+    -webkit-text-stroke: 4px #8d73d6;
     text-align: center;
+    margin-bottom: 80px;
 }
 
-#click-to-start { 
-    font-family: Fredoka;
-    font-weight: 500;
-    text-align: center;
-    color: black;
-    margin: 5.5rem;
-    font-size: 40px;
-    animation: startText 2s linear infinite;
+/* Container til bokse */
+#boxes {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
 }
 
-@keyframes startText {
-0% {opacity: 1;}
-50% {opacity: 0;}
-100% {opacity: 1;}
+/* Boks design */
+.green-box {
+    background-color: rgba(255,255,255,0.9);
+    width: 340px;
+    height: 300px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
+    text-decoration: none;
 }
 
-.fish1 { max-width: 14vw; }
-.fish2 { max-width: 12vw; }
-.fish3 { max-width: 10vw; }
-
-@keyframes fish2 {
-    0%   {transform: translate(110vw, 32vw);}
-    100% {transform: translate(-30vw, 32vw);}
+/* Hover effekt */
+.green-box:hover {
+    transform: scale(1.05);
 }
 
-@keyframes fish3 {
-    0%   {transform: translate(100vw,5vw);}
-    100% {transform: translate(-20vw,10vw);}
+/* Billeder i bokse */
+.green-box img {
+    width: 220px;
+    height: auto;
 }

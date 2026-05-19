@@ -1,52 +1,74 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
 
 body {
-    background-image: url(../img/forside.png);
-    background-repeat: repeat-x;
-    background-position:bottom;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-}
-
-.green-box{
-    background-color: rgba(144,238,144,1);
-    margin: 100px;
-    padding: 20px;
-    width: 25rem;
-    height: 20rem;
-    border-radius: 25px;
-    font-family: Fredoka;
-    display: flex;
     align-items: center;
-    font-size: 2em;
+    font-family: Fredoka;
+    overflow: hidden;
+}
+
+/* Main content */
+main {
+    width: 100%;
+}
+
+/* Overskrift */
+#welcome-header {
     text-align: center;
-    text-decoration: none;
-}
-.green-box h2 {
-    color: black;
-}
 
-.green-box:hover {
-    background-color: rgba(158, 255, 158, 0.9);
-}
-
-#boxes{
-    display: flex;
-    justify-content: center;
-}
-
-#welcome-header{   
     font-family: Fredoka;
     font-size: 4rem;
+    font-weight: 600;
+
     color: white;
+
     text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
-    text-align: center;
+    -3px -3px 0 #8d73d6,
+     3px -3px 0 #8d73d6,
+    -3px  3px 0 #8d73d6,
+     3px  3px 0 #8d73d6;
+
+    margin-top: -180px;
+    margin-bottom: 70px;
+}
+
+/* Boks container */
+#boxes {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Hver boks */
+.green-box {
+    width: 340px;
+    height: 300px;
+
+    background-color: rgba(255,255,255,0.85);
+
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover animation */
+.green-box:hover {
+    transform: scale(1.05);
+}
+
+/* Billeder i bokse */
+.green-box img {
+    width: 220px;
+    height: auto;
 }
