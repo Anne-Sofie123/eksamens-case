@@ -8,7 +8,7 @@ body {
 main {
     display: flex;
 
-    flex-direction: row-reverse;
+    flex-direction: row;
 
     justify-content: space-between;
 
@@ -44,18 +44,30 @@ main {
     gap: 25px;
 }
 
-/* NYE FIGMA BOKSE */
-.new-fish-box {
-    width: 360px;
-    height: auto;
-
+/* FISKEBOKSE */
+.fish-box-1,
+.fish-box-2,
+.fish-box-3,
+.fish-box-4 {
     cursor: pointer;
 
     transition: 0.3s ease;
 }
 
-.new-fish-box:hover {
+.fish-box-1:hover,
+.fish-box-2:hover,
+.fish-box-3:hover,
+.fish-box-4:hover {
     transform: scale(1.03);
+}
+
+/* BILLEDER */
+#fish-1-vector,
+#fish-2-vector,
+#fish-3-vector,
+#fish-4-vector {
+    width: 360px;
+    height: auto;
 }
 
 /* TILBAGE KNAP */
@@ -82,4 +94,38 @@ main {
 #go-back img {
     width: 35px;
     height: auto;
+}
+
+/* CIRKLER */
+.map-circle {
+    position: absolute;
+
+    width: 70px;
+    height: auto;
+
+    display: none;
+}
+
+/* Søhest */
+#søhest-circle {
+    top: 120px;
+    left: 250px;
+}
+
+/* Guldfisk */
+#guldfisk-circle {
+    top: 240px;
+    left: 520px;
+}
+
+/* Haj */
+#haj-circle {
+    top: 320px;
+    left: 230px;
+}
+
+/* Blæksprutte */
+#blæksprutte-circle {
+    top: 330px;
+    left: 500px;
 }
