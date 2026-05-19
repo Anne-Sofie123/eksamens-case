@@ -1,200 +1,67 @@
-#welcome-header {
-    display: flex;
-    justify-content: center;    
+body {
+    margin: 0;
     font-family: Fredoka;
-    font-size: 4rem;
-    color: white;
-    text-shadow:
-    -2px -2px 0 black,
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black;
-    text-align: center;
-    height: 10px;
+    overflow: hidden;
 }
 
-/* Flex cointainer, that moves fish + kort */
+/* MAIN LAYOUT */
 main {
-    padding: 0px 30px 0px 30px;
-    padding-top: 70px;
     display: flex;
-    justify-content: space-around;
+
     flex-direction: row-reverse;
-    align-items: flex-start;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 100vh;
+
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
+/* VERDENSKORT */
+.the-card-box {
+    position: relative;
+}
 
-/* Here you chancge how fishes are displayed */
+#the-card-1 {
+    width: 750px;
+    height: auto;
+
+    background-color: rgba(255,255,255,0.2);
+
+    border-radius: 25px;
+
+    padding: 20px;
+}
+
+/* FISKEBOKSE */
 .fish-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* There has to be a height in order for justify content to work */
-    height: 410px;
-    padding: 50px 0px 0px 30px;
+
+    gap: 25px;
 }
 
-/* Map was a vector, so it has to have a background */
-#the-card-1 {
-    background-color: rgba(144,238,144,0.85);
-    border-radius: 20px;
-}
+/* NYE FIGMA BOKSE */
+.new-fish-box {
+    width: 360px;
+    height: auto;
 
-/* (STARTS HERE) Styling for fish inside a container, inside a div, inside another div*/
-.fish-box-1 {
-    width: auto;
-    border: solid;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
     cursor: pointer;
-    background-color: rgba(144,238,144,0.85);
-    font-family: Fredoka;
+
+    transition: 0.3s ease;
 }
 
-/* The text here is not a text item no more, but a flex item */
-.fish-box-1 p {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
+.new-fish-box:hover {
+    transform: scale(1.03);
 }
 
-#fish-1-vector {
-    height: 80px;
-    width: auto;
-}
-/* ENDS HERE (for .fish-box-1) */
-
-.fish-box-2 {
-    width: auto;
-    border: solid;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    cursor: pointer;
-    background-color: rgba(144,238,144,0.85);
-    font-family: Fredoka;
-}
-.fish-box-2 p {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-}
-
-#fish-2-vector {
-    height: 80px;
-    width: auto;
-}
-
-.fish-box-3 {
-    width: auto;
-    border: solid;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    cursor: pointer;
-    background-color: rgba(144,238,144,0.85);
-    font-family: Fredoka;
-}
-.fish-box-3 p {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-}
-
-#fish-3-vector {
-    height: 80px;
-    width: 90%;
-    scale: 110%;
-}
-
-
-.fish-box-4 {
-    width: auto;
-    border: solid;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    cursor: pointer;
-    background-color: rgba(144,238,144,0.85);
-    font-family: Fredoka;
-}
-.fish-box-4 p {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-}
-
-#fish-4-vector {
-    height: 80px;
-    width: auto;
-}
-
-.fish-box-1:hover {
-    border: solid tomato;
-}
-.fish-box-2:hover {
-    border: solid tomato;
-}
-.fish-box-3:hover {
-    border: solid tomato;
-}
-.fish-box-4:hover {
-    border: solid tomato;
-}
-
-
-/* OVERLAY FISH HOVER */
-.the-card-box {
-    position: relative;
-    scale: 100%;
-}
-
-.map-area {
-    position: absolute;
-    border: dashed 3px;
-    border-color: tomato;
-    border-radius: 90px;
-    display: none;
-}
-
-#area-1 {
-    top: 48%;
-    left: 58%;
-    width: 120px;
-    height: 80px;
-    rotate: 10deg;
-}
-
-#area-2 {
-    top: 38%;
-    left: 76%;
-    width: 120px;
-    height: 80px;
-    rotate: 98deg;
-}
-
-#area-3 {
-    top: 5%;
-    left: 40%;
-    width: 90px;
-    height: 80px;
-    rotate: 116deg;
-}
-
-#area-4 {
-    top: 49%;
-    left: 11%;
-    width: 110px;
-    height: 110px;
-    rotate: 280deg;
-}
-
- #go-back {
+/* TILBAGE KNAP */
+#go-back {
     position: fixed;
+
     top: 20px;
     left: 20px;
 
@@ -209,7 +76,10 @@ main {
     justify-content: center;
     align-items: center;
 
-    text-decoration: none;
-
     z-index: 999;
+}
+
+#go-back img {
+    width: 35px;
+    height: auto;
 }
