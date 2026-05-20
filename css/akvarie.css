@@ -51,6 +51,7 @@ body {
     transform: rotate(-6deg) skewX(5deg);
     opacity: 0.6;
   }
+
   to {
     transform: rotate(6deg) skewX(-5deg);
     opacity: 1;
@@ -77,6 +78,7 @@ body {
     transform: translateY(0);
     opacity: 0.8;
   }
+
   100% {
     transform: translateY(-90vh);
     opacity: 0;
@@ -88,13 +90,24 @@ body {
   display: none;
 }
 
-/* ALLE FIGURER */
+/* GENERELLE FISK */
 img[class^="fish"] {
   position: absolute;
   z-index: 3;
+  cursor: pointer;
 }
 
-/* 1 SØPINDSVIN */
+/* FAKTABOKSE */
+.fakta {
+  position: absolute;
+  width: 220px;
+  height: auto;
+  display: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* FISK */
 .fish1 {
   max-width: 7vw;
   animation: fish1 28s linear infinite;
@@ -102,19 +115,13 @@ img[class^="fish"] {
 }
 
 @keyframes fish1 {
-  from {
-    transform: translate(-20vw, 8vh);
-  }
-
-  to {
-    transform: translate(110vw, 8vh);
-  }
+  from { transform: translate(-20vw, 8vh); }
+  to { transform: translate(110vw, 8vh); }
 }
 
-/* 2 SØHEST */
 .fish2 {
-  max-width: 5vw;
-  animation: fish2 34s linear infinite;
+  max-width: 6vw;
+  animation: fish2 35s linear infinite;
   animation-delay: -3s;
 }
 
@@ -123,7 +130,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 75vh) scaleX(-1); }
 }
 
-/* 3 SKILDPADDE */
 .fish3 {
   max-width: 8vw;
   animation: fish3 40s linear infinite;
@@ -135,7 +141,6 @@ img[class^="fish"] {
   to { transform: translate(110vw, 10vh) scaleX(-1); }
 }
 
-/* 4 HAVSNEGL */
 .fish4 {
   max-width: 7vw;
   animation: fish4 36s linear infinite;
@@ -147,7 +152,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 50vh); }
 }
 
-/* 5 LILLA HAJ */
 .fish5 {
   max-width: 8vw;
   animation: fish5 32s linear infinite;
@@ -159,7 +163,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 85vh); }
 }
 
-/* 6 BLÅ-LILLA HAJ */
 .fish6 {
   max-width: 9vw;
   animation: fish6 38s linear infinite;
@@ -171,7 +174,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 30vh); }
 }
 
-/* 7 KRABBE */
 .fish7 {
   max-width: 5vw;
   animation: fish7 50s linear infinite;
@@ -183,7 +185,6 @@ img[class^="fish"] {
   to { transform: translate(110vw, 92vh); }
 }
 
-/* 8 HAVFRUE */
 .fish8 {
   max-width: 16vw;
   left: 18vw;
@@ -191,7 +192,6 @@ img[class^="fish"] {
   z-index: 2;
 }
 
-/* 9 GULDFISK */
 .fish9 {
   max-width: 9vw;
   animation: fish9 35s linear infinite;
@@ -203,7 +203,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 20vh) scaleX(-1); }
 }
 
-/* 10 GRØN HAJ */
 .fish10 {
   max-width: 8vw;
   animation: fish10 42s linear infinite;
@@ -215,7 +214,6 @@ img[class^="fish"] {
   to { transform: translate(110vw, 78vh) scaleX(-1); }
 }
 
-/* 11 GRØN BLÆKSPRUTTE */
 .fish11 {
   max-width: 6vw;
   animation: fish11 46s linear infinite;
@@ -227,7 +225,6 @@ img[class^="fish"] {
   to { transform: translate(110vw, 68vh) scaleX(-1); }
 }
 
-/* 12 DELFIN */
 .fish12 {
   max-width: 9vw;
   animation: fish12 34s linear infinite;
@@ -239,7 +236,6 @@ img[class^="fish"] {
   to { transform: translate(110vw, 58vh) scaleX(-1); }
 }
 
-/* 13 BLÆKSPRUTTE */
 .fish13 {
   max-width: 8vw;
   animation: fish13 44s linear infinite;
@@ -256,10 +252,8 @@ img[class^="fish"] {
   position: fixed;
   top: 40px;
   left: 20px;
-
   width: 90px;
   height: 90px;
-
   z-index: 999;
 }
 
