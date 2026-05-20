@@ -6,10 +6,10 @@ function hideCircles() {
     });
 }
 
-/* Søhest */
-document.getElementById("søhest-btn").onclick = () => {
+/* Soehest */
+document.getElementById("soehest-btn").onclick = () => {
     hideCircles();
-    document.getElementById("søhest-circle").style.display = "block";
+    document.getElementById("soehest-circle").style.display = "block";
 };
 
 /* Guldfisk */
@@ -24,8 +24,8 @@ document.getElementById("haj-btn").onclick = () => {
     document.getElementById("haj-circle").style.display = "block";
 };
 
-/* Blæksprutte */
-document.getElementById("blæksprutte-btn").onclick = () => {
+/* Blaeksprutte */
+document.getElementById("blaeksprutte-btn").onclick = () => {
     hideCircles();
-    document.getElementById("blæksprutte-circle").style.display = "block";
+    document.getElementById("blaeksprutte-circle").style.display = "block";
 };
