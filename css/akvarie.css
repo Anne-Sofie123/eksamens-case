@@ -15,22 +15,22 @@ body {
   position: relative;
 }
 
+/* BAGGRUND */
 .aquarium {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   background-image: url("../img/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   z-index: -1;
   overflow: hidden;
 }
 
+/* LYSSTRÅLER */
 .ray {
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@ body {
   height: 55vh;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.18),
+    rgba(255,255,255,0.18),
     transparent
   );
   transform-origin: top center;
@@ -51,31 +51,23 @@ body {
     transform: rotate(-6deg) skewX(5deg);
     opacity: 0.6;
   }
-
   to {
     transform: rotate(6deg) skewX(-5deg);
     opacity: 1;
   }
 }
 
-.sand {
-  display: none;
-}
-
-.vignette {
-  display: none;
-}
-
+/* BOBLER */
 .bubble {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(
     circle at 30% 30%,
-    rgba(255, 255, 255, 0.85),
-    rgba(180, 230, 255, 0.4),
+    rgba(255,255,255,0.85),
+    rgba(180,230,255,0.4),
     transparent
   );
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border: 1.5px solid rgba(255,255,255,0.55);
   pointer-events: none;
   animation: bubbleRise linear infinite;
 }
@@ -85,88 +77,193 @@ body {
     transform: translateY(0);
     opacity: 0.8;
   }
-
   100% {
     transform: translateY(-90vh);
     opacity: 0;
   }
 }
 
-.pushable {
-  transition: transform 0.5s ease-out;
+.sand,
+.vignette {
+  display: none;
 }
 
-.fish1 {
+/* ALLE FIGURER */
+img[class^="fish"] {
   position: absolute;
-  max-width: 28vw;
-  transform: translate(-20vw, 10vw);
-  animation: fish1 22s linear infinite;
   z-index: 3;
+}
+
+/* 1 SØPINDSVIN */
+.fish1 {
+  max-width: 7vw;
+  animation: fish1 28s linear infinite;
+  animation-delay: -12s;
 }
 
 @keyframes fish1 {
   from {
-    transform: translate(-20vw, 10vw);
+    transform: translate(-20vw, 8vh);
   }
 
   to {
-    transform: translate(110vw, 10vw);
+    transform: translate(110vw, 8vh);
   }
 }
 
+/* 2 SØHEST */
 .fish2 {
-  position: absolute;
-  max-width: 24vw;
-  animation: fish2 20s linear infinite;
-  animation-delay: 2s;
-  z-index: 3;
+  max-width: 5vw;
+  animation: fish2 34s linear infinite;
+  animation-delay: -3s;
 }
 
 @keyframes fish2 {
-  from {
-    transform: translate(110vw, 32vw) scaleX(-1);
-  }
-
-  to {
-    transform: translate(-30vw, 32vw) scaleX(-1);
-  }
+  from { transform: translate(110vw, 75vh) scaleX(-1); }
+  to { transform: translate(-20vw, 75vh) scaleX(-1); }
 }
 
+/* 3 SKILDPADDE */
 .fish3 {
-  position: absolute;
-  max-width: 20vw;
-  animation: fish3 13s linear infinite;
-  animation-delay: 6s;
-  z-index: 3;
+  max-width: 8vw;
+  animation: fish3 40s linear infinite;
+  animation-delay: -18s;
 }
 
 @keyframes fish3 {
-  from {
-    transform: translate(100vw, 5vw) scaleX(-1);
-  }
-
-  to {
-    transform: translate(-20vw, 10vw) scaleX(-1);
-  }
+  from { transform: translate(-20vw, 10vh) scaleX(-1); }
+  to { transform: translate(110vw, 10vh) scaleX(-1); }
 }
 
+/* 4 HAVSNEGL */
 .fish4 {
-  position: absolute;
-  max-width: 12vw;
-  animation: fish4 25s linear infinite;
-  z-index: 3;
+  max-width: 7vw;
+  animation: fish4 36s linear infinite;
+  animation-delay: -25s;
 }
 
+@keyframes fish4 {
+  from { transform: translate(110vw, 50vh); }
+  to { transform: translate(-20vw, 50vh); }
+}
+
+/* 5 LILLA HAJ */
 .fish5 {
-  position: absolute;
   max-width: 8vw;
-  bottom: 55px;
-  z-index: 6;
+  animation: fish5 32s linear infinite;
+  animation-delay: -8s;
 }
 
-.seastar {
-  position: absolute;
-  max-width: 10vw;
-  bottom: 68px;
+@keyframes fish5 {
+  from { transform: translate(110vw, 85vh); }
+  to { transform: translate(-20vw, 85vh); }
+}
+
+/* 6 BLÅ-LILLA HAJ */
+.fish6 {
+  max-width: 9vw;
+  animation: fish6 38s linear infinite;
+  animation-delay: -20s;
+}
+
+@keyframes fish6 {
+  from { transform: translate(110vw, 30vh); }
+  to { transform: translate(-20vw, 30vh); }
+}
+
+/* 7 KRABBE */
+.fish7 {
+  max-width: 5vw;
+  animation: fish7 50s linear infinite;
+  animation-delay: -30s;
+}
+
+@keyframes fish7 {
+  from { transform: translate(-15vw, 92vh); }
+  to { transform: translate(110vw, 92vh); }
+}
+
+/* 8 HAVFRUE */
+.fish8 {
+  max-width: 16vw;
+  left: 18vw;
+  bottom: 0;
   z-index: 2;
+}
+
+/* 9 GULDFISK */
+.fish9 {
+  max-width: 9vw;
+  animation: fish9 35s linear infinite;
+  animation-delay: -14s;
+}
+
+@keyframes fish9 {
+  from { transform: translate(110vw, 20vh) scaleX(-1); }
+  to { transform: translate(-20vw, 20vh) scaleX(-1); }
+}
+
+/* 10 GRØN HAJ */
+.fish10 {
+  max-width: 8vw;
+  animation: fish10 42s linear infinite;
+  animation-delay: -5s;
+}
+
+@keyframes fish10 {
+  from { transform: translate(-20vw, 78vh) scaleX(-1); }
+  to { transform: translate(110vw, 78vh) scaleX(-1); }
+}
+
+/* 11 GRØN BLÆKSPRUTTE */
+.fish11 {
+  max-width: 6vw;
+  animation: fish11 46s linear infinite;
+  animation-delay: -22s;
+}
+
+@keyframes fish11 {
+  from { transform: translate(-20vw, 68vh) scaleX(-1); }
+  to { transform: translate(110vw, 68vh) scaleX(-1); }
+}
+
+/* 12 DELFIN */
+.fish12 {
+  max-width: 9vw;
+  animation: fish12 34s linear infinite;
+  animation-delay: -10s;
+}
+
+@keyframes fish12 {
+  from { transform: translate(-20vw, 58vh) scaleX(-1); }
+  to { transform: translate(110vw, 58vh) scaleX(-1); }
+}
+
+/* 13 BLÆKSPRUTTE */
+.fish13 {
+  max-width: 8vw;
+  animation: fish13 44s linear infinite;
+  animation-delay: -16s;
+}
+
+@keyframes fish13 {
+  from { transform: translate(110vw, 15vh); }
+  to { transform: translate(-20vw, 15vh); }
+}
+
+/* TILBAGE KNAP */
+#go-back {
+  position: fixed;
+  top: 40px;
+  left: 20px;
+
+  width: 90px;
+  height: 90px;
+
+  z-index: 999;
+}
+
+#go-back img {
+  width: 100%;
+  height: 100%;
 }
