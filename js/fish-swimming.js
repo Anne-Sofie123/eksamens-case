@@ -13,9 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { fish: ".fish8", fakta: ".fish8-fakta", sound: "sounds/havfruen.mp3" },
     { fish: ".fish9", fakta: ".fish9-fakta", sound: "sounds/guldfisk.mp3" },
     { fish: ".fish10", fakta: ".fish10-fakta", sound: "sounds/haj-groen.mp3" },
-    { fish: ".fish11", fakta: ".fish11-fakta", sound: "sounds/blaeksprut-groen.mp3" },
-    { fish: ".fish12", fakta: ".fish12-fakta", sound: "sounds/delfin.mp3" },
-    { fish: ".fish13", fakta: ".fish13-fakta", sound: "sounds/blaeksprut-lyseroed.mp3" }
+    { fish: ".fish11", fakta: ".fish11-fakta", sound: "sounds/delfin.mp3" },
+    { fish: ".fish12", fakta: ".fish12-fakta", sound: "sounds/blaeksprut-lyseroed.mp3" }
 ];
 
     let activeFakta = null;
