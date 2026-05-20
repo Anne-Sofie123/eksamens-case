@@ -7,15 +7,10 @@ body {
 /* MAIN LAYOUT */
 main {
     display: flex;
-
     flex-direction: row;
-
     justify-content: space-between;
-
     align-items: center;
-
     height: 100vh;
-
     padding-left: 120px;
     padding-right: 120px;
 }
@@ -28,11 +23,8 @@ main {
 #the-card-1 {
     width: 750px;
     height: auto;
-
     background-color: rgba(255,255,255,0.2);
-
     border-radius: 25px;
-
     padding: 20px;
 }
 
@@ -40,7 +32,6 @@ main {
 .fish-box {
     display: flex;
     flex-direction: column;
-
     gap: 25px;
 }
 
@@ -50,7 +41,6 @@ main {
 .fish-box-3,
 .fish-box-4 {
     cursor: pointer;
-
     transition: 0.3s ease;
 }
 
@@ -73,21 +63,15 @@ main {
 /* TILBAGE KNAP */
 #go-back {
     position: fixed;
-
     top: 20px;
     left: 20px;
-
     width: 90px;
     height: 90px;
-
     background-color: #f8d9df;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 999;
 }
 
@@ -99,15 +83,13 @@ main {
 /* CIRKLER */
 .map-circle {
     position: absolute;
-
     width: 70px;
     height: auto;
-
     display: none;
 }
 
-/* Søhest */
-#søhest-circle {
+/* Soehest */
+#soehest-circle {
     top: 120px;
     left: 250px;
 }
@@ -124,8 +106,8 @@ main {
     left: 230px;
 }
 
-/* Blæksprutte */
-#blæksprutte-circle {
+/* Blaeksprutte */
+#blaeksprutte-circle {
     top: 330px;
     left: 500px;
 }
