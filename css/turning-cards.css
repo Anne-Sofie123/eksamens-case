@@ -1,90 +1,139 @@
 html,
 body {
+
+    /* Fjerner kanten rundt om siden */
     margin: 0;
+
+    /* Fjerner ekstra plads */
     padding: 0;
+
+    /* Skjuler ting der går uden for skærmen */
     overflow: hidden;
+
+    /* Vælger skrifttypen */
     font-family: Fredoka;
 }
 
-/* GRID */
+/* OMRÅDET MED KORTENE */
 .cards-container {
+
+     /* Fylder hele skærmens bredde */
     width: 100%;
+
+    /* Fylder hele skærmens højde */
     height: 100vh;
 
+    /* Placerer kortene i et gitter */
     display: grid;
+
+    /* Laver 4 kolonner til kortene */
     grid-template-columns: repeat(4, 180px);
 
+    /* Laver mellemrum mellem kortene */
     gap: 40px;
 
+     /* Placerer kortene i midten vandret */
     justify-content: center;
+
+    /* Placerer kortene i midten lodret */
     align-content: center;
 }
 
-/* KORT */
+/* ET ENKELT KORT */
 .card {
+
+    /* Kortets bredde */
     width: 180px;
+
+    /* Kortets højde */
     height: 240px;
 
+     /* Giver en 3D-effekt når kortet vender */
     perspective: 1000px;
 
+    /* Viser at man kan trykke på kortet */
     cursor: pointer;
 }
 
-/* INDRE KORT */
+/* DEN DEL AF KORTET DER VENDER */
 .card-inner {
     width: 100%;
     height: 100%;
 
+    /* Holder billederne inde i kortet */
     position: relative;
 
+    /* Gør vendingen blød */
     transition: transform 0.8s;
 
+     /* Beholder 3D-effekten */
     transform-style: preserve-3d;
 }
 
-/* VEND KORT */
+/* NÅR KORTET BLIVER VENDT */
 .card.flipped .card-inner {
+
+    /* Vender kortet om */
     transform: rotateY(180deg);
 }
 
-/* FORSIDE + BAGSIDE */
+/* FORSIDE OG BAGSIDE AF KORTET */
 .card-front,
 .card-back {
+
+    /* Lægger billederne oven på hinanden */
     position: absolute;
 
     width: 100%;
     height: 100%;
 
+    /* Sørger for at billedet passer i kortet */
     object-fit: contain;
 
+    /* Giver runde hjørner */
     border-radius: 20px;
 
+    /* Skjuler den side man ikke skal se */
     backface-visibility: hidden;
 }
 
-/* FISKEKORT */
+/* BAGSIDEN AF KORTET */
 .card-back {
+
+    /* Drejer bagsiden rigtigt */
     transform: rotateY(180deg);
 }
 
-/* HOVER */
+/* HOVER */ /* NÅR MAN HOLDER OVER KORTET */
 .card:hover {
+
+    /* Gør kortet lidt større */
     transform: scale(1.03);
 }
 
-/* TILBAGE KNAP */
+/* TILBAGE KNAPPEN */
 #go-back {
+
+    /* Holder knappen samme sted */
     position: fixed;
 
+     /* Afstand fra toppen */
     top: 40px;
+
+    /* Afstand fra venstre */
     left: 20px;
 
+    /* Knapens bredde */
     width: 90px;
+
+    /* Knapens højde */
     height: 90px;
 
+    /* Sørger for at knappen ligger foran andre ting */
     z-index: 999;
 }
 
+ /* Gør billedet lige så stort som knappen */
 #go-back img {
     width: 100%;
     height: 100%;
