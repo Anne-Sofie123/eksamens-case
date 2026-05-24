@@ -1,82 +1,142 @@
 <!DOCTYPE html>
+
+<!-- Starter HTML-siden, og sproget er dansk -->
 <html lang="da">
 <head>
+
+    <!-- Sørger for at danske bogstaver vises korrekt -->
     <meta charset="UTF-8">
+
+     <!-- Tilpasser siden til touchskærm -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titlen der vises i browserfanen -->
     <title>Laer om fiskene</title>
 
+    <!-- CSS-fil til akvariets design -->
     <link rel="stylesheet" href="css/akvarie.css">
 
+    <!-- Gør skrifttypen hurtigere klar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+     <!-- Hjælper med at gøre skrifttypen klar -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+     <!-- Bruger skrifttypen Fredoka -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Hele akvarie-baggrunden -->
 <div class="aquarium">
-    <div class="ray" style="left:12%; animation-delay:0s;"></div>
-    <div class="ray" style="left:30%; animation-delay:-1.5s; width:55px;"></div>
-    <div class="ray" style="left:52%; animation-delay:-0.8s; width:70px;"></div>
-    <div class="ray" style="left:74%; animation-delay:-2.2s;"></div>
-    <div class="ray" style="left:90%; animation-delay:-1s; width:50px;"></div>
 
+     <!-- Her ligger baggrunden -->
     <div id="bg-layer"></div>
+
+    <!-- Planter i akvariet -->
     <div id="plants-layer"></div>
 
+    <!-- Sand i bunden -->
     <div class="sand"></div>
+
+    <!-- Skyggeeffekt rundt i kanten -->
     <div class="vignette"></div>
+
+    <!-- Ting der ligger forrest -->
     <div id="fg-layer"></div>
+
 </div>
 
+<!-- Området med fiskene -->
 <section id="akvarie">
+
+    <!-- Alle fiskene og deres faktabokse -->
     <div class="fish">
 
+         <!-- Søpindsvin -->
         <img src="img/soepindsvin.png" alt="soepindsvin" class="fish1" id="soepindsvin">
+
+        <!-- Faktaboks til søpindsvin -->
         <img src="img/fakta-boks-soepindsvin.png" class="fakta fish1-fakta">
 
+        <!-- Søhest -->
         <img src="img/soehest.png" alt="soehest" class="fish2" id="soehest">
+
+        <!-- Faktaboks til søhest -->
         <img src="img/fakta-boks-soehest.png" class="fakta fish2-fakta">
 
+        <!-- Skildpade -->
         <img src="img/skildpade.png" alt="skildpade" class="fish3" id="skildpade">
+
+        <!-- Faktaboks til Skildpade -->
         <img src="img/fakta-boks-skildpadde.png" class="fakta fish3-fakta">
 
+        <!-- Lilla-havsnegl -->
         <img src="img/lilla-havsnegl.png" alt="lilla-havsnegl" class="fish4" id="havsnegl">
+
+        <!-- Faktaboks til Havsnegl -->
         <img src="img/fakta-boks-havsnegl.png" class="fakta fish4-fakta">
 
+        <!-- Lilla-haj -->
         <img src="img/lilla-haj.png" alt="lilla-haj" class="fish5" id="lilla-haj">
+
+        <!-- Faktaboks til Lilla-haj -->
         <img src="img/fakta-boks-haj-lilla.png" class="fakta fish5-fakta">
 
+        <!-- Lilla og blå haj -->
         <img src="img/lilla-blaa-haj.png" alt="lilla-blaa-haj" class="fish6" id="lilla-blaa-haj">
+
+        <!-- Faktaboks til Lilla og blå-haj -->
         <img src="img/fakta-boks-haj-lilla-blaa.png" class="fakta fish6-fakta">
 
+        <!-- Krappe -->
         <img src="img/krappe.png" alt="krappe" class="fish7" id="krappe">
+
+        <!-- Faktaboks til Krabbe -->
         <img src="img/fakta-boks-krabbe.png" class="fakta fish7-fakta">
 
+        <!-- Havfrue -->
         <img src="img/havfrue.png" alt="havfrue" class="fish8" id="havfrue">
+
+        <!-- Faktaboks til Havgruen -->
         <img src="img/fakta-boks-havfruen.png" class="fakta fish8-fakta">
 
+        <!-- Guldfisk -->
         <img src="img/guld-fisk.png" alt="guldfisk" class="fish9" id="guldfisk">
+
+        <!-- Faktaboks til Guldfisken -->
         <img src="img/fakta-boks-guldfisk.png" class="fakta fish9-fakta">
 
+        <!-- Grøn-haj -->
         <img src="img/groen-haj.png" alt="groen-haj" class="fish10" id="groen-haj">
+
+        <!-- Faktaboks til Grøn-haj -->
         <img src="img/fakta-boks-haj-groen.png" class="fakta fish10-fakta">
 
+        <!-- Delfin -->
         <img src="img/delfin.png" alt="delfin" class="fish11" id="delfin">
+
+        <!-- Faktaboks til Delfin-->
         <img src="img/fakta-boks-delfin.png" class="fakta fish11-fakta">
 
+        <!-- Blæksprutte -->
         <img src="img/blaeksprutte.png" alt="blaeksprutte" class="fish12" id="blaeksprutte">
+
+        <!-- Faktaboks til Blæksprutte -->
         <img src="img/fakta-boks-blaeksprut-lyseroed.png" class="fakta fish12-fakta">
 
     </div>
 </section>
 
-<!-- Tilbage knap -->
+<!-- Knap til at gå tilbage til startsiden -->
 <a href="startside.html" id="go-back">
+
+    <!-- Tilbage-knap -->
     <img src="img/tilbage-knap.png" alt="Tilbage">
 </a>
 
+<!-- JavaScript der styrer fiskenes bevægelser -->
 <script src="js/fish-swimming.js"></script>
 
 </body>
