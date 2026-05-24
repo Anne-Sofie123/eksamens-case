@@ -1,48 +1,65 @@
+<!-- Fortæller browseren at dette er et HTML5-dokument -->
 <!DOCTYPE html>
+
+<!-- Starter HTML-dokumentet, "da" betyder at sproget er dansk -->
 <html lang="da">
+
 <head>
+
+    <!-- Gør at danske bogstaver som æ, ø og å vises korrekt -->
     <meta charset="UTF-8">
+
+    <!-- Sørger for at siden skalerer korrekt på mobil og tablet -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titlen der vises i browserens fane -->
     <title>Vendespil</title>
 
+     <!-- Forbinder HTML med CSS-filen til vendespillet -->
     <link rel="stylesheet" href="css/turning-cards.css">
     <link rel="stylesheet" href="css/akvarie.css">
 
+    <!-- Gør forbindelsen til Google Fonts hurtigere -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Henter skrifttypen "Fredoka" fra Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
+<!-- Alt synligt indhold på hjemmesiden starter her -->
 <body>
 
+    <!-- Hovedcontainer til hele akvarie-baggrunden -->
 <div class="aquarium">
-    <div class="ray" style="left:12%; animation-delay:0s;"></div>
-    <div class="ray" style="left:30%; animation-delay:-1.5s; width:55px;"></div>
-    <div class="ray" style="left:52%; animation-delay:-0.8s; width:70px;"></div>
-    <div class="ray" style="left:74%; animation-delay:-2.2s;"></div>
-    <div class="ray" style="left:90%; animation-delay:-1s; width:50px;"></div>
-
+    
+     <!-- Baggrundslag (fx vand, bobler eller baggrundsbilleder) -->
     <div id="bg-layer"></div>
+
+    <!-- Lag til planter -->
     <div id="plants-layer"></div>
 
+    <!-- Sandbund i akvariet -->
     <div class="sand"></div>
-    <div class="vignette"></div>
+
+    <!-- Ting der ligger foran kortene, fx sand, planter og sandslot -->
     <div id="fg-layer"></div>
 </div>
 
-<!-- Tilbage knap -->
+<!-- Tilbage knap --> <!-- Knap man kan trykke på for at komme tilbage til startsiden -->
 <a href="startside.html" id="go-back">
     <img src="img/tilbage-knap.png" alt="Tilbage">
 </a>
 
-<!-- Kort -->
+<!-- Kort --> <!-- Her vises alle kortene i vendespillet -->
 <main class="cards-container">
 
     <!-- Blaeksprutte 1 -->
     <div class="card">
         <div class="card-inner">
+            <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+           <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-blaeksprutte.png" class="card-back">
         </div>
     </div>
@@ -50,7 +67,9 @@
     <!-- Soepindsvin 1 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-soepindsvin.png" class="card-back">
         </div>
     </div>
@@ -58,7 +77,9 @@
     <!-- Guldfisk 2 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-guldfisk.png" class="card-back">
         </div>
     </div>
@@ -66,7 +87,9 @@
     <!-- Delfin 1 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-delfin.png" class="card-back">
         </div>
     </div>
@@ -74,7 +97,9 @@
     <!-- Guldfisk 1 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-guldfisk.png" class="card-back">
         </div>
     </div>
@@ -82,7 +107,9 @@
     <!-- Delfin 2 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-delfin.png" class="card-back">
         </div>
     </div>
@@ -90,7 +117,9 @@
     <!-- Blaeksprutte 2 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-blaeksprutte.png" class="card-back">
         </div>
     </div>
@@ -98,13 +127,16 @@
     <!-- Soepindsvin 2 -->
     <div class="card">
         <div class="card-inner">
+             <!-- Kortets bagside (det man ser først) -->
             <img src="img/vendespil-bagsiden.png" class="card-front">
+             <!-- Kortets forside (vises når kortet vendes) -->
             <img src="img/vendespil-forsiden-soepindsvin.png" class="card-back">
         </div>
     </div>
 
 </main>
 
+<!-- Henter JavaScript-koden som får vendespillet til at virke -->
 <script src="js/turning-cards.js"></script>
 
 </body>
