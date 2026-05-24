@@ -1,49 +1,93 @@
 body {
+
+    /* Fjerner kanten rundt om siden */
     margin: 0;
+
+    /* Vælger skrifttypen */
     font-family: Fredoka;
+
+    /* Skjuler ting uden for skærmen */
     overflow: hidden;
 }
 
-/* MAIN LAYOUT */
+/* INDHOLDET PÅ SIDEN */
 main {
+
+    /* Lægger fisk og verdenskort ved siden af hinanden */
     display: flex;
+
+     /* Placerer dem vandret */
     flex-direction: row;
+
+    /* Laver afstand mellem fiskene og kortet */
     justify-content: space-between;
+
+    /* Placerer indholdet midt på skærmen */
     align-items: center;
+
+    /* Fylder hele skærmen */
     height: 100vh;
+
+    /* Laver luft i siderne */
     padding-left: 120px;
     padding-right: 120px;
 }
 
-/* VERDENSKORT */
+/* OMRÅDET MED VERDENSKORTET */
 .the-card-box {
+
+     /* Gør det muligt at placere cirkel på kortet */
     position: relative;
 }
 
+
 #the-card-1 {
+
+    /* Bestemmer størrelsen på kortet */
     width: 750px;
+
+    /* Beholder den rigtige form */
     height: auto;
+
+    /* Giver en lys baggrund */
     background-color: rgba(255,255,255,0.2);
+
+    /* Gør hjørnerne runde */
     border-radius: 25px;
+
+     /* Laver luft rundt om kortet */
     padding: 20px;
 }
 
-/* FISKEBOKSE */
+
+/* OMRÅDET MED FISKENE */
 .fish-box {
+
+    /* Samler fiskene */
     display: flex;
+
+    /* Lægger fiskene under hinanden */
     flex-direction: column;
+
+     /* Laver afstand mellem fiskene */
     gap: 25px;
 }
 
-/* FISKEBOKSE */
+
+/* FISK MAN KAN TRYKKE PÅ */
 .fish-box-1,
 .fish-box-2,
 .fish-box-3,
 .fish-box-4 {
+
+    /* Viser at fiskene kan trykkes på */
     cursor: pointer;
+
+    /* Gør bevægelsen blød */
     transition: 0.3s ease;
 }
 
+/* Gør fisken lidt større når man rører den */
 .fish-box-1:hover,
 .fish-box-2:hover,
 .fish-box-3:hover,
@@ -51,62 +95,91 @@ main {
     transform: scale(1.03);
 }
 
-/* BILLEDER */
+/* FISKEBILLEDER */
 #fish-1-vector,
 #fish-2-vector,
 #fish-3-vector,
 #fish-4-vector {
+
+    /* Bestemmer fiskens størrelse */
     width: 360px;
+
+    /* Beholder den rigtige form */
     height: auto;
 }
 
 /* TILBAGE KNAP */
 #go-back {
+
+    /* Holder knappen samme sted på skærmen */
     position: fixed;
+
+    /* Placerer knappen fra toppen */
     top: 20px;
+
+    /* Placerer knappen fra venstre */
     left: 20px;
+
+     /* Knapens størrelse */
     width: 90px;
     height: 90px;
+
+    /* Giver knappen farve */
     background-color: #f8d9df;
+
+    /* Gør knappen rund */
     border-radius: 50%;
+
+    /* Hjælper med at centrere pilen */
     display: flex;
+
+    /* Placerer pilen i midten */
     justify-content: center;
     align-items: center;
+
+    /* Sørger for at knappen altid ligger øverst */
     z-index: 999;
 }
 
+/* Pilens størrelse */
 #go-back img {
     width: 35px;
     height: auto;
 }
 
-/* CIRKLER */
+/* CIRKLER */ 
 .map-circle {
+
+    /* Gør det muligt at placere cirklerne præcist */
     position: absolute;
+
+    /* Størrelsen på cirklen */
     width: 70px;
     height: auto;
+
+    /* Skjuler cirklen fra start */
     display: none;
 }
 
-/* Soehest */
+/* SØHESTENS PLACERING */
 #soehest-circle {
     top: 120px;
     left: 250px;
 }
 
-/* Guldfisk */
+/* GULDFISKENS PLACERING */
 #guldfisk-circle {
     top: 240px;
     left: 520px;
 }
 
-/* Haj */
+/* HAJENS PLACERING */
 #haj-circle {
     top: 320px;
     left: 230px;
 }
 
-/* Blaeksprutte */
+/* BLÆKSPRUTTENS PLACERING */
 #blaeksprutte-circle {
     top: 330px;
     left: 500px;
