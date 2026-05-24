@@ -1,119 +1,117 @@
 * {
+
+  /* Gør størrelser nemmere at styre */
   box-sizing: border-box;
+
+   /* Fjerner afstand rundt om elementer */
   margin: 0;
+
+   /* Fjerner afstand rundt om elementer */
   padding: 0;
 }
 
+
 html,
 body {
+
+  /* Fylder hele skærmens bredde */
   width: 100%;
+
+  /* Fylder hele skærmens bredde */
   height: 100%;
+
+   /* Fylder hele skærmens højde */
   overflow: hidden;
 }
 
+
 body {
+
+   /* Gør det muligt at placere ting på siden */
   position: relative;
 }
 
-/* BAGGRUND */
+
+/* AKVARIE BAGGRUND */
 .aquarium {
+
+   /* Holder baggrunden fast på skærmen */
   position: fixed;
+
+   /* Starter helt oppe i venstre hjørne */
   top: 0;
   left: 0;
+
+  /* Fylder hele skærmen */
   width: 100%;
   height: 100%;
+
+   /* Viser baggrundsbilledet */
   background-image: url("../img/background.png");
+
+   /* Viser baggrundsbilledet */
   background-size: cover;
+
+  /* Får billedet til at fylde hele området */
   background-position: center;
+
+  /* Undgår at billedet gentager sig */
   background-repeat: no-repeat;
+
+  /* Undgår at billedet gentager sig */
   z-index: -1;
+
+   /* Skjuler ting der går udenfor */
   overflow: hidden;
 }
 
-/* LYSSTRAALER */
-.ray {
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 55vh;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.18),
-    transparent
-  );
-  transform-origin: top center;
-  pointer-events: none;
-  animation: raySway 5s ease-in-out infinite alternate;
-}
-
-@keyframes raySway {
-  from {
-    transform: rotate(-6deg) skewX(5deg);
-    opacity: 0.6;
-  }
-
-  to {
-    transform: rotate(6deg) skewX(-5deg);
-    opacity: 1;
-  }
-}
-
-/* BOBLER */
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255,255,255,0.85),
-    rgba(180,230,255,0.4),
-    transparent
-  );
-  border: 1.5px solid rgba(255,255,255,0.55);
-  pointer-events: none;
-  animation: bubbleRise linear infinite;
-}
-
-@keyframes bubbleRise {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translateY(-90vh);
-    opacity: 0;
-  }
-}
-
-.sand,
-.vignette {
-  display: none;
-}
-
-/* GENERELLE FISK */
+/* ALLE FISK */
 img[class^="fish"] {
+
+  /* Gør det muligt at flytte fiskene */
   position: absolute;
+
+  /* Lægger fiskene foran baggrunden */
   z-index: 3;
+
+  /* Lægger fiskene foran baggrunden */
   cursor: pointer;
 }
 
 /* FAKTABOKSE */
 .fakta {
+
+  /* Gør det muligt at flytte faktaboksene */
   position: absolute;
+
+  /* Gør det muligt at flytte faktaboksene */
   width: 220px;
   height: auto;
+
+  /* Skjuler dem fra start */
   display: none;
+
+  /* Sørger for at de ligger foran fiskene */
   z-index: 10;
+
+  /* Viser at man kan trykke */
   cursor: pointer;
 }
 
-/* FISK */
+/* FISK */ /* Samme princip gælder for fish2 til fish13: størrelse + bevægelse + startposition */
 .fish1 {
+
+  /* Fiskens størrelse */
   max-width: 7vw;
+
+  /* Fiskens størrelse */
   animation: fish1 28s linear infinite;
+
+  /* Får fisken til at svømme */
   animation-delay: -12s;
 }
 
+/* Bestemmer hvordan fisken svømmer hen over skærmen */
 @keyframes fish1 {
   from { transform: translate(-20vw, 8vh); }
   to { transform: translate(110vw, 8vh); }
@@ -249,14 +247,23 @@ img[class^="fish"] {
 
 /* TILBAGE KNAP */
 #go-back {
+
+  /* Holder knappen fast på skærmen */
   position: fixed;
+
+  /* Holder knappen fast på skærmen */
   top: 40px;
   left: 20px;
+
+  /* Knapens størrelse */
   width: 90px;
   height: 90px;
+
+  /* Knapens størrelse */
   z-index: 999;
 }
 
+/* Gør tilbage-knappens billede lige så stort som knappen */ /* Gør tilbage-knappens billede lige så stort som knappen */
 #go-back img {
   width: 100%;
   height: 100%;
