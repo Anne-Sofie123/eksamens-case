@@ -1,67 +1,96 @@
 <!DOCTYPE html>
+
+<!-- Starter HTML-siden, og "da" betyder dansk -->
 <html lang="da">
+
 <head>
+
+    <!-- Sørger for at danske bogstaver vises korrekt -->
     <meta charset="UTF-8">
+
+    <!-- Tilpasser siden til touchskærm -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titlen der vises i browserfanen -->
     <title>Verdenskort</title>
 
+    <!-- CSS-fil der styrer designet på verdenskort-siden -->
     <link rel="stylesheet" href="css/the-card.css">
+
+    <!-- CSS-fil til akvarie-baggrunden -->
     <link rel="stylesheet" href="css/akvarie.css">
 
+    <!-- Gør skrifttypen hurtigere klar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Hjælper med at vise teksten -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Her vælges skrifttypen Fredoka -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="aquarium">
-    <div class="ray" style="left:12%; animation-delay:0s;"></div>
-    <div class="ray" style="left:30%; animation-delay:-1.5s; width:55px;"></div>
-    <div class="ray" style="left:52%; animation-delay:-0.8s; width:70px;"></div>
-    <div class="ray" style="left:74%; animation-delay:-2.2s;"></div>
-    <div class="ray" style="left:90%; animation-delay:-1s; width:50px;"></div>
 
+ <!-- Hele akvarie-baggrunden -->
+<div class="aquarium">
+
+    <!-- Her ligger baggrunden -->
     <div id="bg-layer"></div>
+
+     <!-- Planter i akvariet -->
     <div id="plants-layer"></div>
 
+    <!-- Sand i bunden -->
     <div class="sand"></div>
+
+    <!-- Skyggeeffekt i kanten -->
     <div class="vignette"></div>
+
+     <!-- Ting der vises forrest -->
     <div id="fg-layer"></div>
+
 </div>
 
-<!-- Tilbage knap -->
+<!-- Knap til at gå tilbage til startsiden -->
 <a href="startside.html" id="go-back">
     <img src="img/tilbage-knap.png" alt="go back">
 </a>
 
+<!-- Knap til at gå tilbage til startsiden -->
 <main>
 
-    <!-- Fiskebokse -->
+    <!-- Bokse med fisk man kan trykke på -->
     <div class="fish-box">
 
         <div class="fish-box-1" id="soehest-btn">
+              <!-- Knap med søhest -->
             <img src="img/soehest-verdenskortet.png" alt="soehest" id="fish-1-vector">
         </div>
 
         <div class="fish-box-2" id="guldfisk-btn">
+            <!-- Knap med guldfisk -->
             <img src="img/guldfisk-verdenskortet.png" alt="guldfisk" id="fish-2-vector">
         </div>
 
         <div class="fish-box-3" id="haj-btn">
+             <!-- Knap med haj -->
             <img src="img/haj-verdenskortet.png" alt="haj" id="fish-3-vector">
         </div>
 
         <div class="fish-box-4" id="blaeksprutte-btn">
+            <!-- Knap med blæksprutte -->
             <img src="img/blaeksprutte-verdenskortet.png" alt="blaeksprutte" id="fish-4-vector">
         </div>
 
     </div>
 
-    <!-- Verdenskort -->
+   <!-- Område med verdenskortet -->
     <div class="the-card-box">
 
+         <!-- Selve verdenskortet -->
         <img src="img/verdens-kort.png" alt="verdenskort" id="the-card-1">
 
         <!-- CIRKLER -->
@@ -74,6 +103,7 @@
 
 </main>
 
+<!-- JavaScript der får siden til at virke -->
 <script src="js/the-card.js"></script>
 
 </body>
