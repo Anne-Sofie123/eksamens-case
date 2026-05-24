@@ -1,74 +1,134 @@
 html,
 body {
+
+     /* Fylder hele skærmen */
     height: 100%;
+
+     /* Fjerner kanten rundt om siden */
     margin: 0;
 }
 
+
 body {
+
+    /* Gør det muligt at placere ting på siden */
     display: flex;
+
+    /* Flytter overskrift og knapper ind mod midten */
     justify-content: center;
+
+     /* Placerer overskrift og knapper midt på skærmen */
     align-items: center;
+
+    /* Vælger skrifttypen */
     font-family: Fredoka;
+
+    /* Skjuler ting der går uden for skærmen */
     overflow: hidden;
 }
 
-/* Main content */
+/* OMRÅDET MED OVERSKRIFT OG KNAPPER */
 main {
+
+    /* Gør området lige så bredt som skærmen */
     width: 100%;
 }
 
+
 /* Overskrift */
 #welcome-header {
+
+    /* Placerer overskriften i midten */
     text-align: center;
 
+    /* Vælger skrifttypen */
     font-family: Fredoka;
+
+    /* Gør teksten stor */
     font-size: 4rem;
+
+    /* Gør teksten tykkere */
     font-weight: 600;
 
+     /* Giver teksten hvid farve */
     color: white;
 
+    /* Giver teksten en lilla kant */
     text-shadow:
     -3px -3px 0 #8d73d6,
      3px -3px 0 #8d73d6,
     -3px  3px 0 #8d73d6,
      3px  3px 0 #8d73d6;
 
+      /* Flytter overskriften længere op */
     margin-top: -180px;
+
+     /* Laver afstand til knapperne */
     margin-bottom: 70px;
 }
 
-/* Boks container */
+
+/* OMRÅDET MED KNAPPERNE */
 #boxes {
+
+    /* Lægger knapperne ved siden af hinanden */
     display: flex;
+
+     /* Placerer knapperne i midten */
     justify-content: center;
+
+     /* Placerer knapperne i midten */
     gap: 80px;
+
+    /* Flytter knapper ned hvis der ikke er plads */
     flex-wrap: wrap;
 }
 
-/* Hver boks */
+
+/* DE ENKELTE KNAPPER */
 .green-box {
+
+    /* Knapens bredde */
     width: 340px;
+
+    /* Knapens højde */
     height: 300px;
 
+     /* Giver knappen en lys baggrund */
     background-color: rgba(255,255,255,0.85);
 
+     /* Gør hjørnerne runde */
     border-radius: 20px;
 
+    /* Hjælper med at placere billedet */
     display: flex;
+
+    /* Placerer billedet i midten */
     justify-content: center;
+
+    /* Placerer billedet i midten */
     align-items: center;
 
+    /* Gør bevægelsen blød */
     transition: 0.3s ease;
+
+    /* Fjern den normale streg, som links plejer at have. */
     text-decoration: none;
 }
 
-/* Hover animation */
+/* EFFEKT NÅR MAN TRYKKER */
 .green-box:hover {
+
+     /* Gør knappen lidt større */
     transform: scale(1.05);
 }
 
-/* Billeder i bokse */
+/* BILLEDER I KNAPPERNE */
 .green-box img {
+
+    /* Bestemmer billedets størrelse */
     width: 220px;
+
+     /* Beholder billedets form */
     height: auto;
 }
