@@ -1,51 +1,83 @@
 <!DOCTYPE html>
+
+<!-- Starter HTML-siden, og sproget er dansk -->
 <html lang="da">
 <head>
+
+    <!-- Sørger for at danske bogstaver vises korrekt -->
     <meta charset="UTF-8">
+
+     <!-- Tilpasser siden til touchskærm -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Titlen der vises i browserfanen -->
     <title>Akvarie</title>
 
+    <!-- CSS-fil til startsidens design -->
     <link rel="stylesheet" href="css/startside.css">
+
+    <!-- CSS-fil til akvarie-baggrunden -->
     <link rel="stylesheet" href="css/akvarie.css">
 
+     <!-- Gør skrifttypen hurtigere klar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Hjælper med at gøre skrifttypen klar -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+     <!-- Bruger skrifttypen Fredoka -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+     <!-- Hele akvarie-baggrunden -->
 <div class="aquarium">
-    <div class="ray" style="left:12%; animation-delay:0s;"></div>
-    <div class="ray" style="left:30%; animation-delay:-1.5s; width:55px;"></div>
-    <div class="ray" style="left:52%; animation-delay:-0.8s; width:70px;"></div>
-    <div class="ray" style="left:74%; animation-delay:-2.2s;"></div>
-    <div class="ray" style="left:90%; animation-delay:-1s; width:50px;"></div>
 
+     <!-- Her ligger baggrunden -->
     <div id="bg-layer"></div>
+
+      <!-- Planter i akvariet -->
     <div id="plants-layer"></div>
 
+    <!-- Sand i bunden -->
     <div class="sand"></div>
+
+    <!-- Skyggeeffekt rundt i kanten -->
     <div class="vignette"></div>
+
+    <!-- Ting der ligger forrest -->
     <div id="fg-layer"></div>
+
 </div>
 
+<!-- Her starter startsiden -->
 <main id="welcome-page">
 
+     <!-- Overskrift på siden -->
     <h1 id="welcome-header">Klar til at spille?</h1>
 
+    <!-- Knapper til de forskellige aktiviteter -->
     <section id="boxes">
 
+        <!-- Knap der fører til verdenskort-siden -->
         <a class="green-box" href="the-card.html">
+
+            <!-- Knap til verdenskort -->
             <img src="img/globus.png" alt="globus">
         </a>
 
+    <!-- Knap der fører til lær om fisk-siden -->
         <a class="green-box" href="akvarie.html">
+
+            <!-- Knap til lær om fisk -->
             <img src="img/blaa-fisk-laer-om-vores-fisk-boks.png" alt="blaa fisk">
         </a>
 
+    <!-- Knap der fører til vendespil-siden -->
         <a class="green-box" href="turning-cards.html">
+
+            <!-- Knap til vendespillet -->
             <img src="img/vende-spil-til-forsiden.png" alt="vendespil">
         </a>
 
