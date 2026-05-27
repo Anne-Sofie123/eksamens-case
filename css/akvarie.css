@@ -128,17 +128,6 @@ img[class^="fish"] {
   to { transform: translate(-20vw, 75vh) scaleX(-1); }
 }
 
-.fish3 {
-  max-width: 8vw;
-  animation: fish3 40s linear infinite;
-  animation-delay: 0s;
-}
-
-@keyframes fish3 {
-  from { transform: translate(-20vw, 10vh) scaleX(-1); }
-  to { transform: translate(110vw, 10vh) scaleX(-1); }
-}
-
 .fish4 {
   max-width: 7vw;
   animation: fish4 36s linear infinite;
