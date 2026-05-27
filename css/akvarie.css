@@ -131,7 +131,7 @@ img[class^="fish"] {
 .fish3 {
   max-width: 8vw;
   animation: fish3 40s linear infinite;
-  animation-delay: -18s;
+  animation-delay: 0s;
 }
 
 @keyframes fish3 {
@@ -215,7 +215,7 @@ img[class^="fish"] {
 .fish11 {
   max-width: 6vw;
   animation: fish11 46s linear infinite;
-  animation-delay: -22s;
+  animation-delay: 0s;
 }
 
 @keyframes fish11 {
